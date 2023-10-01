@@ -96,5 +96,5 @@ let stats = document
   .addEventListener("click", statsfun);
 
 function statsfun() {
-  window.open("https://github.com/rushikeshhumbe23", "_blank");
+  window.open("https://github.com/shisui53", "_blank");
 }
