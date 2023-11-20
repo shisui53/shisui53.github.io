@@ -670,8 +670,9 @@ margin: auto;
   width: 33%;
 }
 
+
 @media (min-width: 575px) {
-  .home { position: relative; }
+ 
 
   .hero-bg {
     display: block;
@@ -689,6 +690,7 @@ margin: auto;
     left: -20px;
   }
   .shape-2 { left: 60px; }
+}
 
   @media screen and (max-width: 768px) {
     #menu-icon {
