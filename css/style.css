@@ -429,7 +429,7 @@ transform: translate3d(0, 0, 0);
     transition: .5s ease;
     
   }
-  .project-card:hover .project-layer {
+  .project-card .project-layer {
     transform: translateY(0);
   }
   
@@ -604,28 +604,7 @@ transform: translate3d(0, 0, 0);
 
 }
 @media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-  }
-  #nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-oxford-red);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    display: none;
-  }
-  #nav-menu.active {
-    display: block;
-  } 
-  #nav-menu a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
+ 
 .home {
   flex-direction: column;
 }
@@ -710,5 +689,34 @@ margin: auto;
     left: -20px;
   }
   .shape-2 { left: 60px; }
+
+  @media screen and (max-width: 768px) {
+    #menu-icon {
+      display: block; /* Display the menu icon */
+    }
+  
+    .header {
+      display: none; /* Hide the navigation links by default */
+      flex-direction: column; /* Stack the links vertically */
+      position: absolute;
+      width: 100%;
+      background-color: #1f242d; /* Change the background color for better visibility */
+      z-index: 1; /* Ensure the menu appears above other elements */
+    }
+  
+    .header.active {
+      display: flex; /* Show the navigation links when the menu is active */
+    }
+  
+    .header a {
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      color: white; /* Change the text color for better visibility */
+    }
+  
+    #resume-button-1 {
+      display: block; /* Display the resume button */
+    }
 
 }
