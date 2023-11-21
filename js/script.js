@@ -26,9 +26,9 @@ function NewTab() {
 // =========================== Resume Button =====================================================
 function downloadAndOpen() {
   const resumeURL =
-    "https://drive.google.com/file/d/1xRaBE1IVLQPEWdfeWw9CgLs5tVE2OLQr/view?usp=drive_link";
+    "https://drive.google.com/file/d/1w8pdYOTvHluTSz1y_QiXpfGk-o-EmTVK/view?usp=drive_link";
   const downloadURL =
-    "https://drive.google.com/uc?export=download&id=1xRaBE1IVLQPEWdfeWw9CgLs5tVE2OLQr";
+    "https://drive.google.com/uc?export=download&id=1w8pdYOTvHluTSz1y_QiXpfGk-o-EmTVK";
 
   // Open the link in a new tab
   window.open(resumeURL, "_blank");
@@ -36,7 +36,7 @@ function downloadAndOpen() {
   // Trigger the download
   const link = document.createElement("a");
   link.href = downloadURL;
-  link.download = "/Users/rajvardhansunilnaik/Documents/portfolio/Rajvardhan Naik Resume .pdf";
+  link.download = "/Users/rajvardhansunilnaik/Documents/portfolio/Rajvardhan-Naik-Resume.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
