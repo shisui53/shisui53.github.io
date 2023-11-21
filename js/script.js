@@ -98,3 +98,19 @@ let stats = document
 function statsfun() {
   window.open("https://github.com/shisui53", "_blank");
 }
+
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const sectionID = this.getAttribute("href");
+    const section = document.querySelector(sectionID);
+
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 160,
+        behavior: "smooth",
+      });
+    }
+  });
+});
