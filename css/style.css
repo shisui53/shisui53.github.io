@@ -102,21 +102,7 @@ section {
     min-height: 90vh;
     padding: 4rem 9% 2rem;
 }
-#nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-#nav-menu.sticky {
-  border-bottom: .1rem solid rgba(0, 0, 0, .2);
-}
+
 .logo {
   font-size: 2.5rem;
   color: var(--text-color);
@@ -692,33 +678,120 @@ margin: auto;
   .shape-2 { left: 60px; }
 }
 
+/*
   @media screen and (max-width: 768px) {
     #menu-icon {
-      display: block; /* Display the menu icon */
+      display: block; 
     }
   
     .header {
-      display: none; /* Hide the navigation links by default */
-      flex-direction: column; /* Stack the links vertically */
+      display: none; 
+      flex-direction: column; 
       position: absolute;
       width: 100%;
-      background-color: #1f242d; /* Change the background color for better visibility */
-      z-index: 1; /* Ensure the menu appears above other elements */
+      background-color: #1f242d; 
+      z-index: 1; 
     }
   
     .header.active {
-      display: flex; /* Show the navigation links when the menu is active */
+      display: flex;
     }
   
     .header a {
       padding: 15px;
       text-align: center;
       text-decoration: none;
-      color: white; /* Change the text color for better visibility */
+      color: white; 
     }
   
     #resume-button-1 {
-      display: block; /* Display the resume button */
+      display: block; 
     }
 
 }
+*/
+
+
+/* base styles */
+/* navbar style */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1f242d;
+  position: fixed;
+  top: 0;
+  color: white;
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+
+.menu li {
+  list-style: none;
+  padding: 5px 14px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background-color: #1f242d;
+    padding: 16px 0;
+  }
+  
+  .menu li:hover {
+    display: inline-block;
+    background-color: #1f242d;
+    transition: 0.3s ease;
+  }
+  
+  .menu li + li {
+    margin-top: 12px;
+  }
+  
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+}
+
+
+
+
+
